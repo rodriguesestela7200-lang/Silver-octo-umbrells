@@ -1,0 +1,131 @@
+Index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Curso Preparatório de Nutrição</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+}
+.box {
+    max-width: 700px;
+    background: #fff;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+}
+h1, h2 {
+    text-align: center;
+    color: #2e7d32;
+}
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+button {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #1b5e20;
+}
+.hidden {
+    display: none;
+}
+.price-old {
+    color: red;
+    text-decoration: line-through;
+}
+.price-new {
+    color: green;
+    font-size: 22px;
+    font-weight: bold;
+}
+.pix {
+    background: #e8f5e9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>Curso Preparatório de Nutrição</h1>
+<p style="text-align:center;">Prepare-se para a faculdade de Nutrição com um curso completo e simples.</p>
+
+<!-- FORMULÁRIO -->
+<div id="form">
+<input type="text" placeholder="Nome completo">
+<input type="number" placeholder="Idade">
+<input type="email" placeholder="E-mail">
+<button onclick="showPromo()">Continuar</button>
+</div>
+
+<!-- PROMOÇÃO -->
+<div id="promo" class="hidden">
+<h2>Promoção Especial</h2>
+<p style="text-align:center;">
+<span class="price-old">De R$130,00</span><br>
+<span class="price-new">Por R$65,00</span>
+</p>
+<button onclick="showPix()">Quero o curso</button>
+</div>
+
+<!-- PIX -->
+<div id="pix" class="hidden">
+<h2>Pagamento via Pix</h2>
+<div class="pix">
+<p><strong>Chave Pix:</strong></p>
+<p>(37) 99238-525</p>
+<p><strong>Valor:</strong> R$65,00</p>
+</div>
+<button onclick="showCourse()">Já paguei</button>
+</div>
+
+<!-- CURSO -->
+<div id="course" class="hidden">
+<h2>Bem-vindo ao curso!</h2>
+<p>Você agora tem acesso completo ao curso preparatório de Nutrição.</p>
+
+<ul>
+<li>Introdução à Nutrição</li>
+<li>Biologia, Química e Bioquímica</li>
+<li>Anatomia e Fisiologia</li>
+<li>Alimentos e Nutrientes</li>
+<li>Avaliação Nutricional</li>
+<li>Nutrição Clínica</li>
+<li>Nutrição Esportiva</li>
+<li>Outras áreas da Nutrição</li>
+<li>Provas e Simulados</li>
+</ul>
+
+<p><strong>Bons estudos! 🥗💚</strong></p>
+</div>
+
+</div>
+
+<script>
+function showPromo() {
+    document.getElementById("promo").classList.remove("hidden");
+}
+function showPix() {
+    document.getElementById("pix").classList.remove("hidden");
+}
+function showCourse() {
+    document.getElementById("course").classList.remove("hidden");
+    window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
